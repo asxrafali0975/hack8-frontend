@@ -39,14 +39,15 @@ function Register() {
           withCredentials: true,
         })
         .then((res) => {
-          if (res.data.success) {
-            alert("Registration successful");
-          }
-        })
-        .catch((err) => {
-          console.error(err);
-          alert("Registration failed");
-        });
+  console.log("Response:", res.data);
+  alert("Registration successful");
+})
+       .catch((err) => {
+  console.error(
+    err.response?.data || err.message
+  );
+  alert("Registration failed");
+});
     });
   };
 
