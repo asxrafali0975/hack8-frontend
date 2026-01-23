@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@import 'remixicon/fonts/remixicon.css';
+
+
+/* globals.css */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 5px #9bd0de, 0 0 10px #086b76, 0 0 20px #3cc1e2;
+  }
+
+   .text-glow-purple {
+    text-shadow: 
+      0 0 5px #7335b6,   /* light purple */
+      0 0 10px #9b4ce6,  /* purple-500 vibe */
+      0 0 20px #622299;  /* deep violet */
+  }
+
+   .text-glow-green {
+    text-shadow: 
+      0 0 5px #59cc81,   /* light minty green */
+      0 0 10px #04491d,  /* green-400 */
+      0 0 20px #237742;  /* deeper emerald */
+  }
+
+  
+}
+
+
+@layer utilities {
+  .animate-gradient-blue {
+    background: linear-gradient(270deg, #00f0ff, #0066ff, #00f0ff);
+    background-size: 600% 600%;
+    animation: gradientMove 8s linear infinite;
+  }
+
+  .animate-gradient-pink {
+    background: linear-gradient(270deg, #ff00aa, #ff66cc, #ff00aa);
+    background-size: 600% 600%;
+    animation: gradientMove 8s linear infinite;
+  }
+
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+
+
+@layer utilities {
+  .border-glow {
+    position: relative;
+  }
+  .border-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* sits exactly on the edge */
+    border-radius: 1rem; /* match rounded-2xl */
+    border: 4px solid #53EAFD; /* thin border */
+    box-shadow: 0 0 20px #53EAFD; /* subtle glow */
+    opacity: 0.9;
+    z-index: -1;
+
+  }
+}
+
+@layer utilities {
+  .border-glow-pink {
+    position: relative;
+  }
+  .border-glow-pink::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* sits exactly on the edge */
+    border-radius: 1rem; /* match rounded-2xl */
+    border: 4px solid #C27AFF; /* thin border */
+    box-shadow: 0 0 20px #C27AFF; /* subtle glow */
+    opacity: 0.9;
+    z-index: -1;
+
+  }
+  .border-glow-red{
+    position: relative;
+  }
+  .border-glow-red::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* sits exactly on the edge */
+    border-radius: 1rem; /* match rounded-2xl */
+    border: 4px solid #f80303f2; /* thin border */
+    box-shadow: 0 0 20px #fa0101ed; /* subtle glow */
+    opacity: 0.9;
+    z-index: -1;
+
+  }
+}
+
