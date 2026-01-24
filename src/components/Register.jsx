@@ -29,25 +29,25 @@ function Register() {
       member1,
       member2: member2 || null,
       member3: member3 || null,
-
       phone: phone,
     };
 
     startTransition(() => {
       axios
-        .post("https://hack8-hackathon-backend-1.onrender.com/getData", payload, {
-          withCredentials: true,
-        })
+        // .post("http://127.0.0.1:8000/getData", payload)
+        .post("https://hack8-hackathon-backend-1.onrender.com/getData", payload)
         .then((res) => {
-  console.log("Response:", res.data);
-  alert("Registration successful");
-})
-       .catch((err) => {
-  console.error(
-    err.response?.data || err.message
-  );
-  alert("Registration failed");
-});
+          if (res.data.success) {
+            alert("Registration successfull");
+          }
+          if (res.data.error_rer) {
+            alert("something went wrong");
+          }
+        })
+        .catch((err) => {
+          
+          alert("Registration failed");
+        });
     });
   };
 
