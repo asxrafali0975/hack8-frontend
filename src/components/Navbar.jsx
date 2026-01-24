@@ -54,14 +54,8 @@ export default function Navbar() {
           <Link to="/" className=" hover:text-blue-600 text-white">
             Home
           </Link>
-          <a
-            href="https://forms.gle/F5dYXtgopLdDjoXn7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" hover:text-blue-600 text-white"
-          >
-            Register
-          </a>
+          
+          <Link to="/register" className=" hover:text-blue-600 text-white" >Register Now</Link>
            <a href="Hack8_guidelines.pdf" target="_blank" className="hover:text-blue-600 transition text-white">
             Guidelines
           </a>

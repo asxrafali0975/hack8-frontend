@@ -17,10 +17,15 @@ function Register() {
 
 
     let EndEmail = email.split('@')[1]
+    print(EndEmail)
 
     if(EndEmail!="axiscolleges.in"){
-      alert("please use email provided by college")
+      alert("Please Use Email Provided By College")
       return
+    }
+    if(phone.length!=10){
+      alert("Enter Valid Phone Number")
+      return 
     }
 
     // basic validation
@@ -134,7 +139,7 @@ function Register() {
           </h6>
           <input
             type="text"
-            placeholder="+91 00000 00000"
+            placeholder="78786 78786"
             onChange={(e) => setNumber(e.target.value)}
             className="w-full rounded-xl h-14 px-4 border sm:w-[90%] xl:w-[30%]"
           />
