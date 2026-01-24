@@ -15,13 +15,23 @@ function Register() {
   const submitFunc = (e) => {
     e.preventDefault();
 
+
+    let EndEmail = email.split('@')[1]
+
+    if(EndEmail!="axiscolleges.in"){
+      alert("please use email provided by college")
+      return
+    }
+
     // basic validation
     if (!email || !Leader_name || !member1 || !phone) {
       alert("Please fill all required fields");
       return;
     }
 
-    // remove empty optional members
+    
+
+ 
 
     const payload = {
       email,
