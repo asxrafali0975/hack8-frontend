@@ -17,7 +17,7 @@ function Register() {
 
 
     let EndEmail = email.split('@')[1]
-    print(EndEmail)
+   
 
     if(EndEmail!="axiscolleges.in"){
       alert("Please Use Email Provided By College")
